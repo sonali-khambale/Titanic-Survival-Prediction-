@@ -12,8 +12,8 @@ This project demonstrates how data preprocessing, feature engineering, and model
 ---
 
 ## 🧠 Model Used
-| Model | Public Score | Description |
-|:------|:-------------:|:------------|
+| Model | Description |
+|:------|:------------|
 | Random Forest Classifier | With advanced feature engineering (Title, FamilySize, IsAlone, AgeBin, FareBin) |
 
 ---
