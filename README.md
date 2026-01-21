@@ -1,59 +1,36 @@
-🚢 Titanic Survival Prediction
+# 🚢 Titanic Survival Prediction
 
-This is a beginner-level machine learning project based on the
-Kaggle Titanic: Machine Learning from Disaster dataset.
+A machine learning project based on the **Kaggle Titanic: Machine Learning from Disaster** competition.  
+This project predicts passenger survival using data analysis, feature engineering, and classification models.
 
-The goal of this project is to predict whether a passenger survived the Titanic disaster using basic machine learning techniques.
+---
 
-📘 Project Overview
+## 📘 Overview
 
-In this project, we:
+This project demonstrates how data preprocessing, feature engineering, and model optimization can improve prediction accuracy on real-world datasets.
 
-Explore the Titanic dataset
+---
 
-Clean missing data
+## 🧠 Model Used
+| Model | Public Score | Description |
+|:------|:-------------:|:------------|
+| Random Forest Classifier | With advanced feature engineering (Title, FamilySize, IsAlone, AgeBin, FareBin) |
 
-Create useful features
+---
+## ⚙️ Features Engineered
+- **Title extraction** (Mr, Miss, Mrs, etc.)
+- **FamilySize** and **IsAlone**
+- **Age** and **Fare** binning
+- **Embarked & Sex** encoding
+- **Missing value imputation**
 
-Train a machine learning model
+---
 
-Predict passenger survival
-
-This project is suitable for students and beginners who are learning machine learning.
-
-🧠 Model Used
-Model	Score	Description
-Random Forest Classifier	0.76555	Used simple feature engineering to improve accuracy
-⚙️ Features Used
-
-Passenger class
-
-Gender
-
-Age
-
-Fare
-
-Family size
-
-Whether the passenger was alone
-
-Port of embarkation
-
-Missing values were filled using simple methods like mean and most common value.
-
-🧩 Project Steps
-
-Load the dataset
-
-Clean missing values
-
-Convert text data to numbers
-
-Create new features
-
-Train the model
-
-Test the model
-
-Submit results to Kaggle
+## 🧩 Workflow
+1. Load and explore data  
+2. Handle missing values  
+3. Create new engineered features  
+4. Encode categorical variables  
+5. Train using Random Forest  
+6. Optimize hyperparameters  
+7. Submit predictions to Kaggle
