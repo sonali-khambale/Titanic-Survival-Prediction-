@@ -1,0 +1,86 @@
+
+1.Importing Libraries
+
+    import numpy as np 
+    import pandas as pd 
+    
+    import matplotlib.pyplot as plt 
+    import seaborn as sns 
+    
+    from sklearn.model_selection import train_test_split 
+    from sklearn.preprocessing import LabelEncoder, StandardScaler 
+    from sklearn.linear_model import LogisticRegression 
+    
+    from sklearn.ensemble import RandomForestClassifier 
+    from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+    
+
+2.Loading the Dataset
+    
+    df = pd.read_csv("/kaggle/input/titanic-dataset/Titanic-Dataset.csv")
+    df.head()
+
+
+3.Understanding the Dataset
+
+    df.shape
+    df.info()
+    df.describe()
+
+
+4.Correlation Matrix
+
+    plt.figure(figsize=(10,6))
+    sns.heatmap(df.corr(numeric_only=True), annot=True, cmap='Blues')
+    plt.title("Correlation Matrix")
+    plt.show()
+
+
+5.Data Preprocessing
+
+      df['Age'].fillna(df['Age'].median(), inplace=True)
+      df['Embarked'].fillna(df['Embarked'].mode()[0], inplace=True)
+      df.drop(['Cabin', 'Name', 'Ticket', 'PassengerId'], axis=1, inplace=True)
+      df['FamilySize'] = df['SibSp'] + df['Parch'] + 1
+      le = LabelEncoder()
+      df['Sex'] = le.fit_transform(df['Sex'])
+      df['Embarked'] = le.fit_transform(df['Embarked'])
+
+
+6.Define Feature and Target
+
+    X = df.drop('Survived', axis=1)
+    y = df['Survived']
+
+
+7.Data Visualization
+
+    sns.countplot(x='Sex', hue='Survived', data=df)
+    plt.title("Survival by Gender")
+    plt.show()
+
+    plt.hist(df['Age'], bins=30)
+    plt.title("Age Distribution")
+    plt.xlabel("Age")
+    plt.ylabel("Count")
+    plt.show()
+
+
+8.Model Evaluation
+
+    lr = LogisticRegression()
+    lr.fit(X_train, y_train)
+    y_pred_lr = lr.predict(X_test)
+    print("Logistic Regression Accuracy:", accuracy_score(y_test, y_pred_lr))
+    print(confusion_matrix(y_test, y_pred_lr))
+    print(classification_report(y_test, y_pred_lr))
+
+
+9.Final Prediction Output
+
+    comparison = pd.DataFrame({
+        'Actual': y_test,
+        'Logistic_Prediction': y_pred_lr,
+        'RandomForest_Prediction': y_pred_rf
+    })
+    comparison.head()
