@@ -1,7 +1,7 @@
 # 🚢 Titanic Survival Prediction
 
-A machine learning project based on the **Kaggle Titanic: Machine Learning from Disaster** competition.
-This project predicts passenger survival using data analysis, feature engineering, and classification models, implemented in a Jupyter Notebook.
+
+This machine learning project predicts passenger survival using data analysis, feature engineering, and classification models, implemented in a Jupyter Notebook.
 
 ---
 
@@ -20,7 +20,7 @@ This project demonstrates how exploratory data analysis (EDA), data preprocessin
 
   * Dist plots
   * Histograms
-  * Bos plots
+  * Box plots
 
 ---
 
@@ -67,7 +67,7 @@ This project demonstrates how exploratory data analysis (EDA), data preprocessin
 6. Train model using Decision Tree
 7. Evaluate model performance
 8. Generate predictions for test data
-9. Submit results to Kaggle
+
 
 ---
 
@@ -84,7 +84,7 @@ This project demonstrates how exploratory data analysis (EDA), data preprocessin
 ## 📈 Results
 
 * Model: Decision Tree Classifier
-* Accuracy: ~75–85% (depending on tuning)
+* Accuracy: ~75–85% 
 
 ---
 
