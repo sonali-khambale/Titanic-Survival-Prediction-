@@ -18,9 +18,9 @@ This project demonstrates how exploratory data analysis (EDA), data preprocessin
 * Checked missing values in dataset
 * Used plots like:
 
-  * Count plots
+  * Dist plots
   * Histograms
-  * Heatmap for correlation
+  * Bos plots
 
 ---
 
